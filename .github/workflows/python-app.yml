@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build container
-        run: sudo docker-compose up -d --build
+        run: docker-compose up -d --build .
       - name: Test
         run: docker-compose exec api python -m pytest "src/tests"
