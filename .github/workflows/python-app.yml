@@ -13,4 +13,4 @@ jobs:
       - name: Build container
         run: docker-compose up -d --build
       - name: Test
-        run: docker-compose exec api python -m pytest "src/tests"
+        run: docker-compose exec -T api python -m pytest "src/tests"
