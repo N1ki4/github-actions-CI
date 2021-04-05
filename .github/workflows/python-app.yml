@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Build container
         run: |
-        chmod 755 entrypoint.sh
-        docker-compose up -d --build
+          chmod 755 entrypoint.sh
+          docker-compose up -d --build
       - name: Test
         run: docker-compose exec api python -m pytest "src/tests"
