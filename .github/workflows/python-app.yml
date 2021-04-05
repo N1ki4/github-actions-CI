@@ -3,13 +3,11 @@
 
 name: test-workflow
 
-on:
-  push:
-    branches: [ users_api_endpoints ]
+on: push
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Build container
         run: docker-compose up -d --build
