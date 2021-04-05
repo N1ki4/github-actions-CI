@@ -3,9 +3,9 @@
     agent any
 
     stages {
-      stage("Build") {
+      stage(‘Build’) {
         steps {
-          sh '/var/jenkins_home/workspace/docker_compose111'
+          sh '/usr/local/bin/docker-compose up --build'
         }
       }
     }
